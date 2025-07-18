@@ -44,7 +44,3 @@
 ## 🌐 访问网站
 
 [https://tw.doveppp.com](https://tw.doveppp.com)
-
----
-
-© 2025 推特数据专家. 保留所有权利. 
