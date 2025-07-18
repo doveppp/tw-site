@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>推特数据爬取专家 - 专业的X(Twitter)数据采集服务</title>
+    <meta name="description" content="专业的推特(X)数据采集服务，提供用户推文采集、关键词搜索、媒体下载、数据存储等全方位解决方案。高效稳定，支持批量处理。">
+    <meta name="keywords"
+        content="推特数据爬取,Twitter数据采集,X数据采集,推特爬虫,Twitter API,社交媒体数据,数据挖掘,网络爬虫,Python爬虫,推文采集,用户数据,关键词搜索,媒体下载,数据分析,社交网络分析">
+    <meta name="author" content="推特数据专家">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="zh-CN">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tw.doveppp.com">
+    <meta property="og:title" content="推特数据爬取专家 - 专业的X(Twitter)数据采集服务">
+    <meta property="og:description" content="专业的推特(X)数据采集服务，提供用户推文采集、关键词搜索、媒体下载、数据存储等全方位解决方案。高效稳定。">
+    <meta property="og:image" content="https://tw.doveppp.com/preview.png">
+    <meta property="og:site_name" content="推特数据采集专家">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tw.doveppp.com">
+    <meta property="twitter:title" content="推特数据爬取专家 - 专业的X(Twitter)数据采集服务">
+    <meta property="twitter:description" content="专业的推特(X)数据采集服务，提供用户推文采集、关键词搜索、媒体下载、数据存储等全方位解决方案。">
+    <meta property="twitter:image" content="https://tw.doveppp.com/preview.png">
+    <meta property="twitter:creator" content="@doveppp">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#1DA1F2">
+    <meta name="msapplication-TileColor" content="#1DA1F2">
+    <meta name="application-name" content="推特数据专家">
+    <meta name="apple-mobile-web-app-title" content="推特数据专家">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tw.doveppp.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Excel读取库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "推特数据专家",
+        "description": "专业的推特(X)数据采集服务提供商",
+        "url": "https://tw.doveppp.com",
+        "logo": "https://tw.doveppp.com/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "admin@doveppp.com",
+            "contactType": "Customer Service",
+            "availableLanguage": ["Chinese", "English"]
+        },
+        "sameAs": [
+            "https://t.me/doveppp"
+        ],
+        "service": {
+            "@type": "Service",
+            "name": "推特数据采集服务",
+            "description": "提供专业的Twitter/X平台数据采集、用户推文获取、关键词搜索、媒体文件下载等服务",
+            "provider": {
+                "@type": "Organization",
+                "name": "推特数据专家"
+            },
+            "serviceType": "数据采集服务",
+            "areaServed": "全球"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fab fa-twitter"></i>
+                <span>推特数据专家</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#services">服务</a></li>
+                <li><a href="#demo">数据展示</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页区域 -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>专业的推特(X)数据爬取服务</h1>
+                <p>高效、稳定、全面的Twitter数据采集解决方案</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn-primary">了解服务</a>
+                    <a href="#contact" class="btn-secondary">立即咨询</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务介绍 -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>核心服务</h2>
+            <p class="section-subtitle">基于最新的Twitter网页API逆向，提供全方位的Twitter数据采集服务</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>用户推文采集</h3>
+                    <p>精准采集指定用户的所有推文，支持时间范围筛选，批量处理多个账户</p>
+                    <ul>
+                        <li>支持历史推文回溯</li>
+                        <li>可设置时间范围</li>
+                        <li>批量用户处理</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>关键词搜索</h3>
+                    <p>基于关键词进行精准搜索，支持复杂查询语法，智能时间分段采集</p>
+                    <ul>
+                        <li>高级搜索语法</li>
+                        <li>智能时间管理</li>
+                        <li>结果去重处理</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>互动数据采集</h3>
+                    <p>采集推文回复、评论，获取用户关注列表，全面的社交网络数据</p>
+                    <ul>
+                        <li>推文评论采集</li>
+                        <li>关注关系网络</li>
+                        <li>互动数据分析</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>媒体文件下载</h3>
+                    <p>支持下载推文中的图片、视频等媒体文件，支持批量处理和本地存储</p>
+                    <ul>
+                        <li>图片自动下载</li>
+                        <li>视频文件获取</li>
+                        <li>GIF动图支持</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>数据存储管理</h3>
+                    <p>支持csv、json、excel、sqlite、mysql、mongodb等多种数据存储</p>
+                    <ul>
+                        <li>csv、json、excel、sqlite、mysql、mongodb</li>
+                        <li>数据结构化</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3>多种过滤方式</h3>
+                    <p>支持多种过滤方式，包括按照用户、关键词、时间范围等</p>
+                    <ul>
+                        <li>按照用户爬取</li>
+                        <li>按照关键词爬取</li>
+                        <li>按照时间范围爬取</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 数据展示 -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2>数据展示案例</h2>
+            <p class="section-subtitle">以下是采集Elon Musk推特数据的真实案例展示（2025年1月1日-2025年1月7日）</p>
+
+            <div class="demo-controls">
+                <div class="demo-info">
+                    <div class="demo-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalTweets">-</span>
+                            <span class="stat-label">条推文</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalLikes">-</span>
+                            <span class="stat-label">总点赞数</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalViews">-</span>
+                            <span class="stat-label">总浏览数</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-download">
+                    <h3>下载完整数据</h3>
+                    <div class="download-buttons">
+                        <a href="elonmusk.xlsx" download class="download-btn excel">
+                            <i class="fas fa-file-excel"></i>
+                            下载 Excel 文件
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-table-container">
+                <div class="table-header">
+                    <h3>最新推文数据预览</h3>
+                    <div class="table-controls">
+                        <button id="refreshData" class="btn-secondary small">刷新数据</button>
+                        <select id="rowsPerPage" class="select-control">
+                            <option value="10">显示 10 条</option>
+                            <option value="20">显示 20 条</option>
+                            <option value="50">显示 50 条</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table id="dataTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>发布时间</th>
+                                <th>用户名</th>
+                                <th>推文内容</th>
+                                <th>点赞数</th>
+                                <th>转发数</th>
+                                <th>浏览数</th>
+                                <th>链接</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dataTableBody">
+                            <tr>
+                                <td colspan="7" class="loading">正在加载数据...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <!-- 分页控件将通过JavaScript生成 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>联系我们</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>专业数据采集服务</h3>
+                    <p>如果您需要专业的推特数据采集服务，请通过以下方式联系我们：</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>邮箱联系</h4>
+                            <p><a href="mailto:admin@doveppp.com">admin@doveppp.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram-plane"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telegram联系</h4>
+                            <p><a href="https://t.me/doveppp" target="_blank">@doveppp</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>响应时间</h4>
+                            <p>通常在24小时内回复</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wechat-qr">
+                    <h3>微信咨询</h3>
+                    <div class="qr-code">
+                        <img src="wechat-qr.png" alt="微信二维码" style="max-width: 200px; border-radius: 10px;">
+                        <p>扫码添加微信</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>推特数据专家</h3>
+                    <p>专业的X(Twitter)数据采集服务提供商</p>
+                </div>
+                <div class="footer-links">
+                    <h4>服务项目</h4>
+                    <ul>
+                        <li><a href="#services">用户推文采集</a></li>
+                        <li><a href="#services">关键词搜索</a></li>
+                        <li><a href="#services">媒体文件下载</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-envelope"></i> admin@doveppp.com</p>
+                    <p><i class="fab fa-telegram-plane"></i> <a href="https://t.me/doveppp" target="_blank">@doveppp</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 推特数据专家. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
